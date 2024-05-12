@@ -7,16 +7,16 @@
 
 
 int main() {
-    setlocale(LC_CTYPE, "rus"); // вызов функции настройки локали для русского языка
+    setlocale(LC_CTYPE, "rus");
+    // вызов функции настройки локали для русского языка
     Automata coffeeAutomata;
     coffeeAutomata.on();
     coffeeAutomata.coin(1000);
-    coffeeAutomata.choice(10);  
+    coffeeAutomata.choice(10);
     if (coffeeAutomata.check()) {
         coffeeAutomata.cook();
         coffeeAutomata.finish();
-    }
-    else {
+    }    else {
         coffeeAutomata.cancel();
     }
     coffeeAutomata.off();
