@@ -85,14 +85,14 @@ void Automata::choice(int menu_position) {
 }
 
 bool Automata::check() {
-    if (state == CHECK) {      
+    if (state == CHECK) {
         if (cash >= prices[option]) {
             cout << "Баланса достаточно. Начинаем приготовление!" << endl;
             return true;
         }   else {
            cout << "Баланса недостаточно." << endl;
         getState();
-        }        
+        }
         return false;
     }   else {
         throw domain_error("Ошибка включения кофе-автомата");
@@ -111,8 +111,7 @@ void Automata::cook() {
 void Automata::finish() {
     if (state == COOK) {
         state = WAIT;
-        cout << "Спасибо, что выбрали наш напиток! \
-            << Аккуратно, горячий стаканчик!" << endl;
+        cout << "Спасибо, что выбрали наш напиток! << endl;
         getMenu();
         getState();
     }  else {
@@ -123,7 +122,6 @@ void Automata::finish() {
 
 void Automata::getState() {
     switch (state) {
-
     case WAIT:
         cout << "Внесите монеты в монетоприемник" << endl;
         break;
