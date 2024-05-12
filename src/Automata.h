@@ -9,7 +9,7 @@ enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 using std::string;
 
 class Automata {
-public:
+ public:
     int cash;  // - для хранения текущей суммы
     const string menu[13] = {
         "Espresso (Short Black)",
@@ -32,7 +32,7 @@ public:
     };
     STATES state;  // - текущее состояние автомата
 
-public:
+ public:
     Automata();
     void on();  // - включение автомата;
     void off();  // - выключение автомата;
