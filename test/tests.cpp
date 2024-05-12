@@ -69,7 +69,7 @@ TEST(test6, incorrect_operation) {
     Automata coffeeAutomata;
     coffeeAutomata.state = ACCEPT;
     try {
-        drinking_machine.choice(3);
+        coffeeAutomata.choice(3);
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
