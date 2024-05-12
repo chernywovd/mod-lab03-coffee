@@ -33,8 +33,7 @@ void Automata::on() {
         cout << "Добро пожаловать!" << endl;
         getMenu();
         getState();
-    }
-    else {
+    }    else {
         throw domain_error("Ошибка включения кофе-машины");
     }
 }
@@ -43,9 +42,7 @@ void Automata::off() {
     if (state == WAIT) {
         state = OFF;
         getState();
-
-    }
-    else {
+    }    else {
         throw domain_error("Ошибка включения кофе-автомата");
     }
 }
