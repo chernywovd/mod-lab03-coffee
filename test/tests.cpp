@@ -13,7 +13,7 @@ TEST(test1, incorrect_operation) {
     Automata coffeeAutomata;
     coffeeAutomata.state = COOK;
     try {
-        coffeeAutomata.off();
+        coffeeAutomata.finish();
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
