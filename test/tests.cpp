@@ -24,7 +24,7 @@ TEST(test2, incorrect_operation) {
     Automata coffeeAutomata;
     coffeeAutomata.state = ACCEPT;
     try {
-        coffeeAutomata.on();
+        coffeeAutomata.choice();
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
@@ -35,7 +35,7 @@ TEST(test3, incorrect_operation) {
     Automata coffeeAutomata;
     coffeeAutomata.state = OFF;
     try {
-        coffeeAutomata.cancel();
+        coffeeAutomata.on();
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
@@ -44,7 +44,7 @@ TEST(test3, incorrect_operation) {
 
 TEST(test4, incorrect_operation) {
     Automata coffeeAutomata;
-    coffeeAutomata.state = COOK;
+    coffeeAutomata.state = WAIT;
     try {
         coffeeAutomata.coin(245);
     }
@@ -56,7 +56,7 @@ TEST(test4, incorrect_operation) {
 
 TEST(test5, incorrect_operation) {
     Automata coffeeAutomata;
-    coffeeAutomata.state = ACCEPT;
+    coffeeAutomata.state = CHECK;
     try {
         coffeeAutomata.cook();
     }
