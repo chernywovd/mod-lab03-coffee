@@ -50,7 +50,8 @@ void Automata::off() {
 void Automata::coin(int coinAddValue) {
     if (state == WAIT || state == ACCEPT) {
         if (coinAddValue < 0) {
-            throw domain_error("Ошибка кофе-автомата. Обратитесь к администратору.");
+            throw domain_error("Ошибка кофе-автомата. 
+                Обратитесь к администратору.");
         }
         state = ACCEPT;
         cash += coinAddValue;
