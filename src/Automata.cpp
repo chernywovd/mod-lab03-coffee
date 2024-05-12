@@ -34,7 +34,7 @@ void Automata::on() {
         getMenu();
         getState();
     }    else {
-        throw domain_error("Ошибка включения кофе-машины");
+        throw domain_error("Ошибка включения кофе-автомата");
     }
 }
 
@@ -50,16 +50,14 @@ void Automata::off() {
 void Automata::coin(int coinAddValue) {
     if (state == WAIT || state == ACCEPT) {
         if (coinAddValue < 0) {
-            throw domain_error("Ошибка кофе-автомата. 
-                Обратитесь к администратору.");
+            throw domain_error("Ошибка включения кофе-автомата");
         }
         state = ACCEPT;
         cash += coinAddValue;
         getState();
     }
     else {
-        throw domain_error("Ошибка кофе-автомата. \
-            Обратитесь к администратору.");
+       throw domain_error("Ошибка включения кофе-автомата");
     }
 }
 
@@ -70,7 +68,7 @@ void Automata::cancel() {
         getState();
     }
     else {
-        throw domain_error("Ошибка кофе-автомата. Обратитесь к администратору.");
+        throw domain_error("Ошибка включения кофе-автомата");
     }
 }
 
@@ -85,7 +83,7 @@ void Automata::choice(int menu_position) {
         getState();
     }
     else {
-        throw domain_error("Ошибка кофе-автомата. Обратитесь к администратору.");
+       throw domain_error("Ошибка включения кофе-автомата");
     }
 }
 
@@ -104,8 +102,7 @@ bool Automata::check() {
         return false;
     }
     else {
-        throw domain_error("Ошибка кофе-автомата. Обратитесь к администратору.");
-    }
+        throw domain_error("Ошибка включения кофе-автомата");
 }
 
 void Automata::cook() {
@@ -115,7 +112,7 @@ void Automata::cook() {
         getState();
     }
     else {
-        throw domain_error("Ошибка кофе-автомата. Обратитесь к администратору.");
+        throw domain_error("Ошибка включения кофе-автомата");
     }
 }
 
@@ -127,7 +124,7 @@ void Automata::finish() {
         getState();
     }
     else {
-        cout << "Ошибка кофе-автомата. Обратитесь к администратору." << endl;
+        throw domain_error("Ошибка включения кофе-автомата");
     }
 }
 
