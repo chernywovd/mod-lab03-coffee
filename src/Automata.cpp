@@ -63,8 +63,8 @@ void Automata::coin(int coinAddValue) {
 void Automata::cancel() {
     if (state == ACCEPT || state == CHECK) {
         state = WAIT;
-        cout << "Баланса недостаточно. "" \
-            << Внесите дополнительные монеты в монетоприемник" \
+        cout << "Баланса недостаточно. "
+            << Внесите дополнительные монеты в монетоприемник" 
             << endl;
         getState();
     }
