@@ -10,7 +10,6 @@ using std::string;
 
 class Automata {
 public:
-    
     int cash;  // - для хранения текущей суммы
     const string menu[13] = {
         "Espresso (Short Black)",
