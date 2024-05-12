@@ -80,7 +80,7 @@ TEST(test7, incorrect_operation) {
     Automata coffeeAutomata;
     coffeeAutomata.state = WAIT;
     try {
-        coffeeAutomata.check();
+        coffeeAutomata.off();
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
