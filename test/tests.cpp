@@ -94,7 +94,7 @@ TEST(test8, states) {
     coffeeAutomata.choice(13);
     EXPECT_EQ(CHECK, coffeeAutomata.state);
 }
-    
+
 TEST(test9, states) {
         Automata coffeeAutomata;
         coffeeAutomata.on();
