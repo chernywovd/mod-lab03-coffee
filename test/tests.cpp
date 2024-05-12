@@ -24,7 +24,7 @@ TEST(test2, incorrect_operation) {
     Automata coffeeAutomata;
     coffeeAutomata.state = ACCEPT;
     try {
-        coffeeAutomata.choice();
+        coffeeAutomata.choice(8);
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
