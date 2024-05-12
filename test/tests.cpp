@@ -56,7 +56,7 @@ TEST(test4, incorrect_operation) {
 
 TEST(test5, incorrect_operation) {
     Automata coffeeAutomata;
-    coffeeAutomata.state = ON;
+    coffeeAutomata.state = ACCEPT;
     try {
         coffeeAutomata.cook();
     }
