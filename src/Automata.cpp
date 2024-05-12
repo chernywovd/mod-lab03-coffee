@@ -111,7 +111,7 @@ void Automata::cook() {
 void Automata::finish() {
     if (state == COOK) {
         state = WAIT;
-        cout << "Спасибо, что выбрали наш напиток! << endl;
+        cout<<"Спасибо, что выбрали наш напиток!"<<endl;
         getMenu();
         getState();
     }  else {
