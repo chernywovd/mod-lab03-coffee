@@ -58,7 +58,8 @@ void Automata::coin(int coinAddValue) {
         getState();
     }
     else {
-        throw domain_error("Ошибка кофе-автомата. Обратитесь к администратору.");
+        throw domain_error("Ошибка кофе-автомата. \
+            Обратитесь к администратору.");
     }
 }
 
